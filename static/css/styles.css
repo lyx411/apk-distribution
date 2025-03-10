@@ -1,0 +1,91 @@
+/* Custom styles that extend Bootstrap */
+:root {
+  --bs-primary-rgb: 90, 160, 255;
+  --bs-secondary-rgb: 50, 55, 65;
+}
+
+.version-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.version-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-download {
+  min-width: 120px;
+}
+
+.changelog {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgba(var(--bs-dark-rgb), 0.03);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* 版本列表表格样式 */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(var(--bs-primary-rgb), 0.03);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(var(--bs-primary-rgb), 0.08);
+}
+
+.table th {
+  font-weight: 600;
+  border-top: none;
+}
+
+.table-active {
+  background-color: rgba(var(--bs-primary-rgb), 0.1) !important;
+}
+
+.hero-section {
+  padding: 4rem 0;
+  background: linear-gradient(
+    to right,
+    rgba(var(--bs-dark-rgb), 0.95),
+    rgba(var(--bs-dark-rgb), 0.8)
+  );
+}
+
+.version-tag {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.release-date {
+  font-size: 0.85rem;
+  color: var(--bs-secondary-color);
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .version-card {
+    margin-bottom: 1.5rem;
+  }
+}
